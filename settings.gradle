@@ -1,0 +1,2 @@
+include ':snapper'
+include ':snapper-compiler'

@@ -1,0 +1,16 @@
+ext {
+  kotlinVersion = "1.2.61"
+
+  libs = [kotlinStdLib  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+          okio          : "com.squareup.okio:okio:2.0.0",
+          kotlinPoet    : "com.squareup:kotlinpoet:1.0.0-RC1",
+          autoCommmon   : "com.google.auto:auto-common:0.10",
+          autoService   : "com.google.auto.service:auto-service:1.0-rc4",
+          kotlinMetadata: "me.eugeniomarletti.kotlin.metadata:kotlin-metadata:1.4.0"]
+
+  testLibs =
+      [kotlinCompilerEmbeddable: "org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion",
+       kaptEmbeddable          : "org.jetbrains.kotlin:kotlin-annotation-processing-embeddable:$kotlinVersion",
+       junit                   : "junit:junit:4.12",
+       assertj                 : "org.assertj:assertj-core:1.7.0"]
+}

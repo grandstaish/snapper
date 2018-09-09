@@ -1,0 +1,11 @@
+apply plugin: 'kotlin'
+
+sourceSets {
+  main.kotlin.srcDirs = ['src/main/kotlin']
+  main.java.srcDirs = ['src/main/kotlin']
+}
+
+dependencies {
+  implementation libs.kotlinStdLib
+  compile libs.okio
+}

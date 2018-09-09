@@ -1,0 +1,20 @@
+import org.gradle.internal.jvm.Jvm
+
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+  implementation project(":snapper")
+  implementation libs.kotlinStdLib
+  implementation libs.kotlinPoet
+  implementation libs.autoCommmon
+  implementation libs.kotlinMetadata
+  compileOnly libs.autoService
+  kapt libs.autoService
+  compileOnly files(Jvm.current().getToolsJar())
+  testCompile testLibs.kotlinCompilerEmbeddable
+  testCompile testLibs.kaptEmbeddable
+  testCompile testLibs.junit
+  testCompile testLibs.assertj
+}
+
