@@ -4,11 +4,11 @@ apply plugin: 'kotlin'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-  implementation project(":snapper")
-  implementation libs.kotlinStdLib
-  implementation libs.kotlinPoet
-  implementation libs.autoCommmon
-  implementation libs.kotlinMetadata
+  compile project(":snapper")
+  compile libs.kotlinStdLib
+  compile libs.kotlinPoet
+  compile libs.autoCommmon
+  compile libs.kotlinMetadata
   compileOnly libs.autoService
   kapt libs.autoService
   compileOnly files(Jvm.current().getToolsJar())

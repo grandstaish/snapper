@@ -20,13 +20,14 @@ subprojects { project ->
   }
 
   apply from: "$rootDir/gradle-scripts/dependencies.gradle"
-  apply from: rootProject.file('gradle-scripts/bintray.gradle')
-  apply from: rootProject.file('gradle-scripts/snapshots.gradle')
 
   group = GROUP
   version = VERSION_NAME
 
   tasks.withType(Javadoc).all { enabled = false }
+
+  apply from: "$rootDir/gradle-scripts/bintray.gradle"
+  apply from: "$rootDir/gradle-scripts/snapshots.gradle"
 }
 
 task clean(type: Delete) {
